@@ -1,0 +1,220 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #bababa;
+  font-family: "Montserrat";
+  font-weight: normal;
+}
+p {
+  margin: 10px 0;
+  padding: 0;
+  color: #062f42;
+}
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  background-color: #fff;
+  padding: 0 50px;
+}
+
+header .logo img {
+  width: 7rem;
+}
+
+header nav ul {
+  display: flex;
+  gap: 50px;
+}
+header nav li {
+  list-style-type: none;
+  font-weight: 600;
+}
+header .cart {
+  position: relative;
+  height: 40%;
+}
+header .cart img {
+  width: 45px;
+  cursor: pointer;
+}
+header .cart .addedProducts {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #161414;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+.hidden {
+  display: none;
+}
+.loading {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* --------------Filter ----------------- */
+
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  font-weight: 600;
+}
+.filter form {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.filter form button {
+  background-color: brown;
+}
+.filter input.search,
+select {
+  font-size: 16px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #161414;
+  background-color: inherit;
+}
+.filter input.search:focus,
+select:focus {
+  background-color: #fff;
+}
+
+.product-list {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-item {
+  list-style: none;
+  background-color: #fff;
+  padding: 10px;
+  max-width: 250px;
+  min-width: 250px;
+  max-height: 380px;
+  min-height: 380px;
+}
+
+.product-item img {
+  max-width: 250px;
+  min-width: 250px;
+  max-height: 300px;
+  min-height: 280px;
+}
+.product-item span {
+  font-weight: 600;
+  color: #161414;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: #161414;
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: #fff;
+  color: #161414;
+}
+
+.product-item button {
+  margin-left: 50px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 2rem 0;
+}
+
+/* -----NotFound------------------- */
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #be1414;
+}
+
+.not-found p {
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0 20px;
+  }
+  header .logo img {
+    width: 2rem;
+  }
+  header nav ul {
+    gap: 7px;
+    font-size: 7px;
+  }
+  header .cart img {
+    width: 35px;
+  }
+  .filter {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .filter form {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .filter form button {
+    width: 100%;
+  }
+  .product-list {
+    margin-top: 2rem;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .product-item {
+    max-width: 150px;
+    min-width: 150px;
+    max-height: 380px;
+    min-height: 300px;
+  }
+  .product-item img {
+    max-width: 150px;
+    min-width: 150px;
+    max-height: 200px;
+    min-height: 200px;
+  }
+
+  .product-item button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .addedProducts {
+    font-size: 10px !important;
+  }
+}
