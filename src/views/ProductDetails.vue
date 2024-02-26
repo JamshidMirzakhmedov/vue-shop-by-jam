@@ -103,9 +103,9 @@ fetchProduct();
   height: 400px;
   overflow: visible;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .product-details {
-    padding-top: 50px;
+    padding-top: 80px;
   }
   .swiper {
     width: 100%;
